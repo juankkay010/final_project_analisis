@@ -4,5 +4,9 @@ import tkinter as tk
 class PaginaCeros(tk.Toplevel):
     def __init__(self, root):
         super().__init__(root)
-        self.geometry('400x400')
+        self.title("Ceros de Funciones")
+        self.geometry('1300x850')
+
+    def inicializar_interfaz(self):
+
 

@@ -48,7 +48,6 @@ class PaginaTaylor(tk.Toplevel):
                                                                                self.inicial.get()))
         boton_mostrar_valores.grid(row=3, columnspan=2, pady=10)
 
-        # Mostrar el polinomio en el widget ScrolledText
         self.texto_polinomio.delete('1.0', tk.END)
 
     def ejecutar_taylor(self, funcion, grado, inicial):
@@ -81,7 +80,7 @@ class PaginaTaylor(tk.Toplevel):
         funcion = sp.lambdify(x, funcion)
         polinomio = sp.lambdify(x, polinomio)
 
-        x_vals = np.linspace(inicial - 50, inicial + 50, 100)
+        x_vals = np.linspace(inicial - 10, inicial + 10, 100)
         y_vals_funcion = funcion(x_vals)
         y_vals_polinomio = polinomio(x_vals)
 
