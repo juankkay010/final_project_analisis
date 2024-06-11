@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from tkinter import messagebox
 
+
 class PaginaTaylor(tk.Toplevel):
     def __init__(self, root):
         super().__init__(root)
