@@ -1,5 +1,7 @@
 import tkinter as tk
-import guis.gui_taylor as ty
+import guis.gui_taylor
+import guis.gui_ed
+
 
 class gui_principal:
 
@@ -44,38 +46,19 @@ class gui_principal:
         boton_ecuaciones.pack(pady=10)
 
     def abrir_pagina_taylor(self):
-        ty.PaginaTaylor(self.root)
-
+        guis.gui_taylor.PaginaTaylor(self.root)
 
     def abrir_pagina_ceros(self):
-        pagina = tk.Toplevel(self.root)
-        pagina.title("Ceros de funciones")
-        pagina.geometry("500x500")
-
-        label = tk.Label(pagina, text="Ceros de funciones")
-        label.pack(pady=10)
+        pass
 
     def abrir_pagina_sistemas_ecuaciones(self):
-        pagina = tk.Toplevel(self.root)
-        pagina.title("Sistemas de Ecuaciones Lineales")
-        pagina.geometry("500x500")
-        label = tk.Label(pagina, text="Sistemas de Ecuaciones")
-        label.pack(pady=10)
+        pass
 
     def abrir_pagina_interpolacion(self):
-        pagina = tk.Toplevel(self.root)
-        pagina.title("Interpolacion y Ajuste Lineal")
-        pagina.geometry("500x500")
-
-        label = tk.Label(pagina, text="Interpolacion y Ajuste Lineal")
-        label.pack(pady=10)
+        pass
 
     def abrir_pagina_ecuaciones(self):
-        pagina = tk.Toplevel(self.root)
-        pagina.title("Ecuaciones Diferenciales")
-        pagina.geometry("500x500")
-        label = tk.Label(pagina, text="Ecuaciones Diferenciales")
-        label.pack(pady=10)
+        guis.gui_ed.PaginaEcuacionesDiferenciales(self.root)
 
     def mostrar_pagina(self, frame):
         frame.tkraise()

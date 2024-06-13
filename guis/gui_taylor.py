@@ -96,8 +96,3 @@ class PaginaTaylor(tk.Toplevel):
         self.ejes_polinomio.legend()
         self.canvas_polinomio.draw()
 
-
-if __name__ == "__main__":
-    root = tk.Tk()
-    app = PaginaTaylor(root)
-    root.mainloop()
