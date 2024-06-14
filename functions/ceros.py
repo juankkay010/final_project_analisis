@@ -22,11 +22,11 @@ def posicion_falsa(f, a, b, tol):
         print(f"La funcion no cumple el teorema en [{a}, {b}]")
         return ""
     else:
-        c = a - f(a)(a - b) / (f(a) - f(b))
+        c = a - f(a)*(a - b) / (f(a) - f(b))
         i = 1
         while abs(f(c)) > tol:
             i += 1
-            c = a - f(a)(a - b) / (f(a) - f(b))
+            c = a - f(a)*(a - b) / (f(a) - f(b))
             if f(a) * f(c) < 0:
                 b = c
             else:

@@ -1,6 +1,10 @@
 import tkinter as tk
+from tkinter import ttk
 import guis.gui_taylor
 import guis.gui_ed
+import guis.gui_interpolacion
+import guis.gui_ceros
+import guis.gui_sde
 
 
 class gui_principal:
@@ -10,6 +14,7 @@ class gui_principal:
         self.root.title("Análisis Numérico")
         self.root.geometry("500x300")
         self.root.resizable(False, False)
+
 
         # Paginas
         self.pagina_opciones = tk.Frame(self.root)
@@ -49,13 +54,12 @@ class gui_principal:
         guis.gui_taylor.PaginaTaylor(self.root)
 
     def abrir_pagina_ceros(self):
-        pass
-
+        guis.gui_ceros.PaginaCeros(self.root)
     def abrir_pagina_sistemas_ecuaciones(self):
-        pass
+        guis.gui_sde.PaginaSistemasEcuaciones(self.root)
 
     def abrir_pagina_interpolacion(self):
-        pass
+        guis.gui_interpolacion.PaginaInterpolacion(self.root)
 
     def abrir_pagina_ecuaciones(self):
         guis.gui_ed.PaginaEcuacionesDiferenciales(self.root)
